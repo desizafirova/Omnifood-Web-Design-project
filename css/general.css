@@ -43,6 +43,7 @@ Paragraph-default: 1.6
 
 ------- 04 Border-radius
 Default: 9px
+Medium: 11px;
 
 ------- 05 Whitespace
 
@@ -184,4 +185,8 @@ body {
 /* using helper class */
 .margin-right-sm {
   margin-right: 1.6rem;
+}
+
+strong {
+  font-weight: 500;
 }
