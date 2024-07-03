@@ -26,9 +26,9 @@ Paragraph-default: 1.6
 
 - Primary: #e67e22
 
-- Tint: #fdf2e9#fae5d3
+- Tint: #fdf2e9#fae5d3#eb984e
 
-- Shades: #cf711f
+- Shades: #cf711f#45260a
 
 - Accents:
 
@@ -41,6 +41,7 @@ Paragraph-default: 1.6
       
 ------- 03 Shadows
 
+0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
 
 ------- 04 Border-radius
 Default: 9px
@@ -151,12 +152,13 @@ body {
   letter-spacing: 0.75px;
 }
 
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
-  background-color: #e67e22;
+  /* background-color: #e67e22; */
   font-size: 2rem;
-  color: #fff;
+  /* color: #fff; */
   padding: 1.6rem 3.2rem;
   border-radius: 9px;
   text-decoration: none;
@@ -165,16 +167,22 @@ body {
    Put transition on original "state" */
   transition: all 0.3s;
   font-weight: 600;
+
+  /* necessary for the .btn only */
+  border: none;
+  cursor: pointer;
 }
 
 .btn--full:link,
 .btn--full:visited {
   background-color: #e67e22;
+  color: #fff;
 }
 
 .btn--full:hover,
 .btn--full:active {
   background-color: #cf711f;
+  color: #fff;
 }
 
 .btn--outline:link,
@@ -192,6 +200,19 @@ body {
   /* Trick to add border inside */
 
   box-shadow: 0 0 0 3px #fff;
+}
+
+.btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+}
+
+.btn--form:hover,
+.btn--form:active {
+  background-color: #fff;
+  color: #555;
 }
 
 .link:link,
@@ -228,6 +249,11 @@ body {
   width: 3rem;
   height: 3rem;
   color: #e67e22;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgb(230, 126, 34, 0.5);
 }
 
 /* using helper/setting class */
