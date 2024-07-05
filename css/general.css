@@ -68,6 +68,8 @@ html {
     In this way the user's settings are respected */
   font-size: 62.5%;
   overflow-x: hidden;
+  /* but scroll-behavior maybe doesn't work on Safari and Microsoft Edge*/
+  /* scroll-behavior: smooth; */
 }
 
 body {
